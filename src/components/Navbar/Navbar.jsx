@@ -1,47 +1,51 @@
-import React from 'react'
-
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import NavbarLinks from "./NavbarLinks";
+import { FiShoppingCart,FiMenu } from "react-icons/fi";
+import useToggleMenu from "../../hooks/useToggleMenu";
 function Navbar() {
+  const {isMenuOpen, toggleMenu} = useToggleMenu(false)
   return (
-    <div className="navbar bg-base-100">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+    <div className="z-10 w-full fixed top-0 right-0 bg-white px-4">
+      <nav className="flex justify-between items-center max-container h-16">
+            <div>
+              <Link to="/">
+                <h1 className="text-3xl font-bold">E-Commerce</h1>
+              </Link>
+            </div>
+            
+            <div className="hidden md:block">
+              <ul className="flex flex-row items-center gap-4">
+              <NavbarLinks />
+              </ul>
+            </div>
+
+            <div className="flex items-center justify-center gap-x-1"> 
+           <div className="flex gap-x-1 items-center justify-center">
+           <FiShoppingCart />
+            <i className="text-xs">0</i>
+           </div>
+            <div className="block md:hidden  ">
+               <button onClick={toggleMenu}>
+            <FiMenu size={20} /></button>
+            </div>
+            </div>
+           
+       
+      </nav>
+   {
+      isMenuOpen && (
+        <div className="block md:hidden w-full">
+        <ul className="flex flex-col justify-center items-center w-full gap-4 py-3">
+        <NavbarLinks />
+        </ul>
       </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
-      </ul>
+      )
+   }
+       
+   
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
-  </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
-  </div>
-</div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

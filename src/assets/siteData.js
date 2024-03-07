@@ -7,10 +7,7 @@ const navbarLinks = [
     label: "Products",
     link: "/products",
   },
-  {
-    label: "Cart",
-    link: "/cart",
-  },
+  
 ];
 
 export { navbarLinks };
