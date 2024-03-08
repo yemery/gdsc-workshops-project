@@ -20,17 +20,16 @@ function Navbar() {
               </ul>
             </div>
 
-            <div className="flex items-center justify-center gap-x-1"> 
+            <div className="flex items-center justify-center gap-x-1">
            <div className="flex gap-x-1 items-center justify-center">
            <FiShoppingCart />
             <i className="text-xs">0</i>
            </div>
-            <div className="block md:hidden  ">
+            {/* <div className="flex md:hidden  items-center justify-center"> */}
                <button onClick={toggleMenu}>
-            <FiMenu size={20} /></button>
+            <FiMenu /></button>
+            {/* </div> */}
             </div>
-            </div>
-           
        
       </nav>
    {
