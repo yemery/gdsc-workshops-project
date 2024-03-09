@@ -1,14 +1,12 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import NavbarLinks from "./NavbarLinks";
 import { FiShoppingCart, FiMenu } from "react-icons/fi";
-import useToggleMenu from "../../hooks/useToggleMenu";
 import { navbarLinks } from "../../assets/siteData";
 function Navbar() {
   return (
       <nav className="bg-white fixed w-full z-20 top-0 start-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <img src="/vite.svg" alt="" />
+          <img src="/logo.svg" alt="" />
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
               type="button"
@@ -23,7 +21,6 @@ function Navbar() {
               aria-controls="navbar-sticky"
               aria-expanded="false"
             >
-              {/* <span className="sr-only">Open main menu</span> */}
               <FiMenu size={20} />
             </button>
           </div>

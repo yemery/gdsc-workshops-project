@@ -1,9 +1,24 @@
-import React from 'react'
-
+import React from "react";
+import FooterColumns from "./FooterColumns";
+import { footerData } from "../../assets/siteData";
 function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <footer className="bg-[#F8F9FA] py-8">
+      <div className="max-w-screen-xl flex  justify-between mx-auto p-4">
+        <div className="flex flex-col gap-2">
+          <img src="/logo.svg" alt="" />
+          <p className="text-xs">© 2024. All rights reserved</p>
+        </div>
+        <div className="flex flex-row gap-x-20 ">
+          {
+            footerData.map((e)=>(
+              <FooterColumns {...e}/>
+            ))
+          }
+        </div>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
