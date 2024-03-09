@@ -1,49 +1,56 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import NavbarLinks from "./NavbarLinks";
-import { FiShoppingCart,FiMenu } from "react-icons/fi";
+import { FiShoppingCart, FiMenu } from "react-icons/fi";
 import useToggleMenu from "../../hooks/useToggleMenu";
+import { navbarLinks } from "../../assets/siteData";
 function Navbar() {
-  const {isMenuOpen, toggleMenu} = useToggleMenu(false)
   return (
-    <div className="z-10 w-full fixed top-0 right-0 bg-white px-4">
-      <nav className="flex justify-between items-center max-container h-16">
-            <div>
-              <Link to="/">
-                <h1 className="text-3xl font-bold">E-Commerce</h1>
-              </Link>
-            </div>
-            
-            <div className="hidden md:block">
-              <ul className="flex flex-row items-center gap-4">
-              <NavbarLinks />
-              </ul>
-            </div>
-
-            <div className="flex items-center justify-center gap-x-1">
-           <div className="flex gap-x-1 items-center justify-center">
-           <FiShoppingCart />
-            <i className="text-xs">0</i>
-           </div>
-            {/* <div className="flex md:hidden  items-center justify-center"> */}
-               <button onClick={toggleMenu}>
-            <FiMenu /></button>
-            {/* </div> */}
-            </div>
-       
+      <nav className="bg-white fixed w-full z-20 top-0 start-0">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <img src="/vite.svg" alt="" />
+          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button
+              type="button"
+              className=" font-medium rounded-lg text-sm  text-center "
+            >
+               <FiShoppingCart size={20} />
+            </button>
+            <button
+              data-collapse-toggle="navbar-sticky"
+              type="button"
+              className="  rounded-lg md:hidden focus:outline-none "
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              {/* <span className="sr-only">Open main menu</span> */}
+              <FiMenu size={20} />
+            </button>
+          </div>
+          <div
+            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-sticky"
+          >
+            <ul className="flex flex-col p-4 md:p-0 mt-4 items-center gap-y-4    rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              {navbarLinks.map((link, index) => (
+                <li key={index}>
+                  <NavLink
+                    to={link.link}
+                    className={({ isActive }) => {
+                      return (
+                        isActive && "font-semibold "
+                      );
+                    }}
+                  >
+                    {link.label}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </nav>
-   {
-      isMenuOpen && (
-        <div className="block md:hidden w-full">
-        <ul className="flex flex-col justify-center items-center w-full gap-4 py-3">
-        <NavbarLinks />
-        </ul>
-      </div>
-      )
-   }
-       
-   
-    </div>
+  
   );
 }
 

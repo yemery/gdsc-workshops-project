@@ -7,6 +7,10 @@ const navbarLinks = [
     label: "Products",
     link: "/products",
   },
+  {
+    label: "Contact",
+    link: "/Contact",
+  },
   
 ];
 
