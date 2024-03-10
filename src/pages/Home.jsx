@@ -1,10 +1,12 @@
 import React from "react";
+import NewsletterSection from "../components/Newsletter/NewsletterSection";
 
 
 function Home() {
   return (
    <>
-   <h1>hey</h1>
+   <NewsletterSection />
+   <NewsletterSection />
    </>
   );
 }
