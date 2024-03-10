@@ -1,11 +1,12 @@
 import React from "react";
 import NewsletterSection from "../components/Newsletter/NewsletterSection";
+import CardSwiper from "../components/SwiperSection/CardSwiper";
 
 
 function Home() {
   return (
    <>
-   <NewsletterSection />
+   <CardSwiper/>
    <NewsletterSection />
    </>
   );
