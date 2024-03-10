@@ -57,4 +57,35 @@ const shopSectionData = [
   { label: "phones", image: "phones.png" },
 ];
 
-export { navbarLinks, footerData, shopSectionData };
+const products = [
+  {
+    id: 1,
+    title: "Product 1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    price: 19.99,
+    img: "https://via.placeholder.com/150",
+  },
+  {
+    id: 2,
+    title: "Product 2",
+    description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    price: 29.99,
+    img: "https://via.placeholder.com/150",
+  },
+  {
+    id: 3,
+    title: "Product 3",
+    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    price: 39.99,
+    img: "https://via.placeholder.com/150",
+  },
+  {
+    id: 4,
+    title: "Product 4",
+    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    price: 39.99,
+    img: "https://via.placeholder.com/150",
+  },
+  // Add more products as needed
+];
+export { navbarLinks ,footerData,products,shopSectionData };

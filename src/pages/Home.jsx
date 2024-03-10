@@ -1,14 +1,18 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import Shop from "../components/Shop/Shop";
+import NewsletterSection from "../components/Newsletter/NewsletterSection";
+import CardSwiper from "../components/SwiperSection/CardSwiper";
 
-function Home() {
+const Home = () => {
   return (
-    <div className="flex flex-col gap-20">
+    <>
       <Header />
       <Shop />
-    </div>
+      <CardSwiper />
+      <NewsletterSection />
+    </>
   );
-}
+};
 
 export default Home;

@@ -3,7 +3,7 @@ import FooterColumns from "./FooterColumns";
 import { footerData } from "../../assets/siteData";
 function Footer() {
   return (
-    <footer className="bg-[#F8F9FA] py-8">
+    <footer className="bg-[#F8F9FA] py-8 mt-4">
       <div className="max-w-screen-xl flex justify-around mx-auto">
         <div className="flex flex-col gap-2">
           <img src="/logo.svg" alt="" />

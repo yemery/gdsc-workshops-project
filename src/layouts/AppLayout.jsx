@@ -5,9 +5,9 @@ import { Outlet } from 'react-router-dom'
 
 function AppLayout() {
   return (
-    <div className='flex flex-col h-screen  '>
+    <div className='flex flex-col h-screen'>
       <Navbar />
-      <div className='flex-1 mt-16 '>
+      <div className='flex-1 w-4/5 mx-auto'>
       <Outlet />
       </div>
       <Footer/>
@@ -15,4 +15,4 @@ function AppLayout() {
   )
 }
 
-export default AppLayout
+export default AppLayout;
