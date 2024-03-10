@@ -1,7 +1,13 @@
 import React from "react";
 
-function HeadingTitle({ title }) {
-  return <p className="font-semibold text-3xl">{title}</p>;
+function HeadingTitle(props) {
+  return(
+
+<div className="text-center">
+   <p className="text-xl font-medium">{props.title}</p>
+   <p className="text-sm">{props.description}</p>
+  </div>
+  )
 }
 
 export default HeadingTitle;

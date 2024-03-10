@@ -8,7 +8,7 @@ const NewsletterSection = () => {
             <p className='text-sm'>Sign up for texts to be notified about our best offers on the perfect gifts.</p>
             <img src="images/newsletter.svg" alt="" className='w-[100px] h-[100px]' />
             <form action="#">
-              <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+              <div class="items-center justify-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                   <div class="relative w-full">
                       <label for="email" class="hidden mb-2 text-sm font-medium  ">Email address</label>
                       <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">

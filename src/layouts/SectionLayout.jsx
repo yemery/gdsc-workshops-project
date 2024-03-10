@@ -1,19 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const SectionLayout = (props,children) => {
+const SectionLayout = ({ title, description, children }) => {
   return (
-    <div>
-        <section className="bg-white dark:bg-gray-800">
-            <div className="container px-6 py-8 mx-auto">
-            <h2 className="text-4xl font-medium text-gray-800 dark:text-gray-100">{props.title}</h2>
-            <p className="mt-4 text-gray-600 dark:text-gray-300">{props.description}</p>
-            <div className="grid gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {children}
-            </div>
-            </div>
-        </section>
-    </div>
-  )
-}
+    <section className="bg-white">
+      <div className="w-full h-full flex flex-col items-center justify-center py-10 gap-y-6 ">
+        <div className="text-center">
+          <h3 className="text-xl font-medium">{title}</h3>
+          <p className="text-sm">{description}</p>
+        </div>
+        <div className="mt-3 w-full">{children}</div>
+      </div>
+    </section>
+  );
+};
 
-export default SectionLayout
+export default SectionLayout;
