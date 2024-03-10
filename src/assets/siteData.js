@@ -73,6 +73,13 @@ const products = [
     price: 39.99,
     img: "https://via.placeholder.com/150",
   },
+  {
+    id: 4,
+    title: "Product 4",
+    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    price: 39.99,
+    img: "https://via.placeholder.com/150",
+  },
   // Add more products as needed
 ];
 export { navbarLinks ,footerData,products};

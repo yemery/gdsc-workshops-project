@@ -4,14 +4,12 @@ const ProductItem = (props) => {
   return (
     
 
-<div className="max-w-sm bg-white ">
-    <a href="#" className=''>
-        <img className="" src={props.img} alt=""  />
-    </a>
-    <div className="">
-        <a href="#">
-            <h5 className="font-medium tracking-tight text-gray-900 dark:text-white">{props.title}</h5>
-        </a>
+<div className="flex flex-col px-3">
+ <div className='flex-1' >
+        <img className="w-full h-full" src={props.img} alt=""  />
+  </div>
+    <div className="flex flex-col gap-2">
+        <h4 className="text-lg font-medium text-gray-800 dark:text-gray-100">{props.title}</h4>
         <p className="text-sm font-normal text-gray-700 dark:text-gray-400">{props.description.substring(0,100)}...</p>
         <p>{props.price}</p>
     </div>
