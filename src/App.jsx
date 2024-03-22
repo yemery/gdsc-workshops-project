@@ -8,12 +8,15 @@ import {
 import AppLayout from "./layouts/AppLayout";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   const router = createBrowserRouter([
     {
+      path: "/",
+
       element: <AppLayout />,
-      // errorElement: <NotFound />,
+      errorElement: <NotFound />,
       children: [
         {
           path: "/",

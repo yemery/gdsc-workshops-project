@@ -2,11 +2,12 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FiShoppingCart, FiMenu } from "react-icons/fi";
 import { navbarLinks } from "../../assets/siteData";
+import LogoImg from "../commons/LogoImg";
 function Navbar() {
   return (
       <nav className="bg-white fixed w-full z-20 top-0 start-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <img src="/logo.svg" alt="" className="w-[170px] h-[21px]"/>
+          <LogoImg/>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
               type="button"
